@@ -3,3 +3,6 @@
     font-weight: bold;
     color: blue;
 }
+#potree_render_area {
+    top: 300px;
+}
