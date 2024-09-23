@@ -5,6 +5,7 @@ import {
   Routes
 } from "react-router-dom";
 import { IndexPage } from './IndexPage';
+import { PointCloudPage } from './PointCloudPage';
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
       <Router>
       <Routes>
           <Route path="/" element={<IndexPage />} /> 
-          <Route path="/pointcloud" />
+          <Route path="/pointcloud" element={<PointCloudPage />}/>
         </Routes  >
       </Router>
     </>

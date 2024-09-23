@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import viteLogo from '/vite.svg'
+import { Link } from "react-router-dom";
 
 export function IndexPage(): JSX.Element {
     
@@ -16,6 +17,7 @@ export function IndexPage(): JSX.Element {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <Link to="/pointcloud">Point Cloud</Link>
         <p className="text-blue-500 text-3xl font-bold underline">
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
