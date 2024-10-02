@@ -1,0 +1,16 @@
+.slide-image {
+    min-width: 100%; /* 各スライドはスライダーの幅と同じ */
+    height: auto;
+}
+.container {
+    top: 100;
+position: absolute;
+    width: 96vw; /* 画面幅 */
+    height: 96vh; /* 画面高 */
+    overflow: hidden; 
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
