@@ -1,9 +1,18 @@
 import "./IndexPage.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import viteLogo from '/vite.svg'
 export function IndexPage(): JSX.Element {
-    
+
+  console.log(import.meta.env.VITE_SERVER_APP_URL);
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_SERVER_APP_URL}/pointclouds`, {
+      mode: "cors",
+      method: "GET"
+    }).then(res => res.json())
+    .then(res => console.log(res))
+    .catch(err => console.error(err));
+  }, []);
   const [count, setCount] = useState(0)
     return <div className="main_page_area">
         <div>
@@ -20,9 +29,6 @@ export function IndexPage(): JSX.Element {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>;
 }
 
