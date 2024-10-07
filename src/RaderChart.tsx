@@ -21,7 +21,7 @@ import {
         ],
         datasets: [
           {
-            data: [90, 10, 4, 52, 15],
+            data: [9, 10, 4, 5, 1],
             backgroundColor: 'rgba(255, 255, 132, 0.6)',
             borderColor: 'rgba(255, 99, 244, 1)',
             borderWidth: 1,
@@ -32,16 +32,11 @@ import {
     
       const options: any = {
         type: 'radar',
-        scale: {
-          ticks: {
-            beginAtZero: true,
+        
+        scales: {
+          r: {            
             min: 0,
             max: 100,
-            stepSize: 20,
-           },
-        },
-        scales: {
-          r: {
             grid: {
               circular: false,
               lineWidth: 5,
@@ -59,7 +54,9 @@ import {
               display: true,
             },
             ticks: {
+              beginAtZero: true,
               display: false,
+              stepSize: 20,
             },
           },
         },
